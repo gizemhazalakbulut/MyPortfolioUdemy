@@ -26,6 +26,6 @@ Razor View, JavaScript, jQuery
 ## 📸 Ekran Görüntüleri
 
 ### Kullanıcı Arayüzü
-!(images/dashboard.png)
+![](images/dashboard.png)
 
 ### Admin Paneli
