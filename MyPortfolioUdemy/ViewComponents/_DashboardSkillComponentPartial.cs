@@ -3,13 +3,14 @@ using MyPortfolioUdemy.DAL.Context;
 
 namespace MyPortfolioUdemy.ViewComponents
 {
-    public class _TestimonialComponentPartial:ViewComponent
+    public class _DashboardSkillComponentPartial : ViewComponent
     {
         MyPortfolioContext context = new MyPortfolioContext();
         public IViewComponentResult Invoke()
         {
-            var values = context.Testimonials.ToList();
-            return View(values);
+            var value = context.Skills.ToList();
+            return View(value);
         }
     }
+    
 }

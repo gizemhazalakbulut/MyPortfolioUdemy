@@ -8,8 +8,9 @@ namespace MyPortfolioUdemy.ViewComponents
         MyPortfolioContext portfolioContext = new MyPortfolioContext();
         public IViewComponentResult Invoke()
         {
-            var values = portfolioContext.Features.ToList();
-            return View(values);
+            ViewBag.featureTitle = portfolioContext.Features.Select(x => x.Title).FirstOrDefault();
+            ViewBag.featureDescription = portfolioContext.Features.Select(x => x.Description).FirstOrDefault();
+            return View();
         }
     }
 }

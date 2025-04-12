@@ -1,0 +1,56 @@
+﻿@model List<ToDoList>
+
+<div class="col-md-8">
+	<div class="card card-tasks">
+		<div class="card-header ">
+			<h4 class="card-title">Yapılacaklar</h4>
+			<p class="card-category">Yapılacaklar Listesi</p>
+		</div>
+		<div class="card-body ">
+			<div class="table-full-width">
+				<table class="table">
+					<thead>
+						<tr>
+							<th>
+								<div class="form-check">
+									<label class="form-check-label">
+										<input class="form-check-input  select-all-checkbox" type="checkbox" data-select="checkbox" data-target=".task-select">
+										<span class="form-check-sign"></span>
+									</label>
+								</div>
+							</th>
+							<th>Görev</th>
+							<th>İşlem</th>
+						</tr>
+					</thead>
+					<tbody>
+						@foreach (var item in Model)
+						{
+							<tr>
+								<td>
+									<div class="form-check">
+										<label class="form-check-label">
+											<input class="form-check-input task-select" type="checkbox">
+											<span class="form-check-sign"></span>
+										</label>
+									</div>
+								</td>
+								<td>@item.Title</td>
+								<td class="td-actions text-right">
+									<div class="form-button-action">
+										<button type="button" data-toggle="tooltip" title="Edit Task" class="btn btn-link <btn-simple-primary">
+											<i class="la la-edit"></i>
+										</button>
+										<button type="button" data-toggle="tooltip" title="Remove" class="btn btn-link btn-simple-danger">
+											<i class="la la-times"></i>
+										</button>
+									</div>
+								</td>
+							</tr>
+						}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>

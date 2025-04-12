@@ -1,0 +1,71 @@
+﻿@model List<Skill>
+
+<div class="row row-card-no-pd">
+	<div class="col-md-6">
+		<div class="card">
+			<div class="card-body">
+				@foreach(var item in Model)
+				{
+				<div class="progress-card">
+					<div class="d-flex justify-content-between mb-1">
+						<span class="text-muted">@item.Title</span>
+						<span class="text-muted fw-bold"> %@item.Value</span>
+					</div>
+					<div class="progress mb-2" style="height: 7px;">
+							<div class="progress-bar bg-success" role="progressbar" style="width: @item.Value%" aria-valuenow="@item.Value" aria-valuemin="0" aria-valuemax="100" data-toggle="tooltip" data-placement="top" title="@item.Value%"></div>
+					</div>
+				</div>
+				}
+			
+			</div>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<div class="card card-stats">
+			<div class="card-body">
+				<p class="fw-bold mt-1">İstatistik</p>
+				<div class="row">
+					<div class="col-5">
+						<div class="icon-big text-center icon-warning">
+							<i class="la la-pie-chart text-warning"></i>
+						</div>
+					</div>
+					<div class="col-7 d-flex align-items-center">
+						<div class="numbers">
+							<p class="card-category">Sayı</p>
+							<h4 class="card-title">150GB</h4>
+						</div>
+					</div>
+				</div>
+				<hr />
+				<div class="row">
+					<div class="col-5">
+						<div class="icon-big text-center">
+							<i class="la la-heart-o text-primary"></i>
+						</div>
+					</div>
+					<div class="col-7 d-flex align-items-center">
+						<div class="numbers">
+							<p class="card-category">Takipçi</p>
+							<h4 class="card-title">+45K</h4>
+						</div>
+					</div>
+				</div>
+				<hr />
+				<div class="row">
+					<div class="col-5">
+						<div class="icon-big text-center">
+							<i class="la la-pencil-square-o text-danger"></i>
+						</div>
+					</div>
+					<div class="col-7 d-flex align-items-center">
+						<div class="numbers">
+							<p class="card-category">Referanslar</p>
+							<h4 class="card-title">6</h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

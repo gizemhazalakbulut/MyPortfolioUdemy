@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewData["Title"] = "DashboardList";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+<div class="content">
+	<div class="container-fluid">
+		<h4 class="page-title">Dashboard</h4>
+		@await Component.InvokeAsync("_DashboardStatisticComponentPartial")
+		@await Component.InvokeAsync("_DashboardSkillComponentPartial")
+	
+		<div class="row">
+
+			@await Component.InvokeAsync("_DashboardYuzdeComponentPartial")
+		
+			@await Component.InvokeAsync("_DashboardToDoListComponentPartial")
+		</div>
+	</div>
+</div>
+

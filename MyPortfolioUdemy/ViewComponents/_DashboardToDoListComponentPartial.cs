@@ -3,14 +3,14 @@ using MyPortfolioUdemy.DAL.Context;
 
 namespace MyPortfolioUdemy.ViewComponents
 {
-    public class _FooterComponentPartial: ViewComponent
+    public class _DashboardToDoListComponentPartial: ViewComponent
     {
-         MyPortfolioContext context = new MyPortfolioContext();
+        MyPortfolioContext portfolioContext = new MyPortfolioContext();
         public IViewComponentResult Invoke()
         {
-            var values=context.SocialMedias.ToList();
+            var values = portfolioContext.ToDoLists.ToList();
             return View(values);
         }
     }
-    
+   
 }
