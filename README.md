@@ -21,6 +21,7 @@ Bu proje Murat Yücedağ rehberliğinde, ASP.NET Core 6.0 ile geliştirilen, ki�
 
 ### Kullanıcı Arayüzü
 
-![](images/dashboard.png)
+![dashboard](https://github.com/user-attachments/assets/703412c4-f564-46bf-a6e2-568a15c8e7cc)
+
 
 ### Admin Paneli
